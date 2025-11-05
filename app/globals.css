@@ -1,1 +1,9 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper scrolling on mobile */
+body {
+  overflow-x: hidden;
+}

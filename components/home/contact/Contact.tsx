@@ -27,20 +27,53 @@ const Contact = () => {
                     </div>
 
                     {/*Social icons*/}
-                    <div className='flex items-center mt-8 space-x-3' >
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer flex-col hover:bg-blue-800 transition-all duration-300'>
+                    <div className='flex items-center mt-8 space-x-3'>
+                        {/* LinkedIn */}
+                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#0077B5] transition-all duration-300'>
                             <FaLinkedin className='text-white w-6 h-6' />
                         </div>
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer flex-col hover:bg-pink-500 transition-all duration-300'>
+
+                        {/* Instagram */}
+                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] transition-all duration-300'>
                             <FaInstagram className='text-white w-6 h-6' />
                         </div>
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer flex-col hover:bg-black transition-all duration-300'>
+
+                        {/* GitHub */}
+                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#181717] transition-all duration-300'>
                             <FaGithub className='text-white w-6 h-6' />
                         </div>
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer flex-col hover:bg-amber-500 transition-all duration-300'>
+
+                        {/* LeetCode */}
+                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-linear-to-tr from-[#FFA116] to-[#F27C00] transition-all duration-300'>
                             <FaCode className='text-white w-6 h-6' />
                         </div>
                     </div>
+                </div>
+
+                {/*form*/}
+                <div className='md:p-10 p-5 bg-[#131332] rounded-lg'>
+                    <input
+                        type="text"
+                        placeholder='Name'
+                        className='px-4 py-3.5 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
+                    />
+                    <input
+                        type="email"
+                        placeholder='Email Address'
+                        className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
+                    />
+                    <input
+                        type="text"
+                        placeholder='Mobile no.'
+                        className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
+                    />
+                    <textarea
+                        placeholder='Your Message'
+                        className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70 h-[10rem] resize-none scroll-m-0'
+                    />
+
+                    <button className='mt-8 px-12 py-4 bg-blue-950 hover:bg-blue-900 transition-all duration-300 cursor-pointer text-white rounded-full '>Send Message</button>
+
                 </div>
             </div>
         </div>
