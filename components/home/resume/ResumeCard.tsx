@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { IconType } from 'react-icons';
 
 type Props = {
     role: string;
     Icon: IconType;
     date?: string;
-    description: string;
+    description: any;
 }
 
 const ResumeCard = ({ Icon, role, date, description }: Props) => {
@@ -22,9 +22,9 @@ const ResumeCard = ({ Icon, role, date, description }: Props) => {
                     <h1 className='text-gray-200 text-xl sm:text-2xl font-semibold'>
                         {role}
                     </h1>
-                    <p className='text-gray-300 text-sm sm:text-base pt-3'>
+                    <h1 className='text-gray-300 text-sm sm:text-base pt-3'>
                         {description}
-                    </p>
+                    </h1>
                 </div>
             </div>
         </div>

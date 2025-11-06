@@ -7,17 +7,17 @@ export const NavLinks = [
     {
         id:2,
         url:"#services",
-        label: "Services",
+        label: "Expertise",
     },
     {
         id:3,
         url:"#resume",
-        label:"Resume",
+        label:"Experience",
     },
     {
         id:4,
         url:"#work",
-        label:"Work",
+        label:"Projects",
     },
     {
         id:5,
@@ -27,7 +27,7 @@ export const NavLinks = [
     {
         id:6,
         url:"#testimonials",
-        label:"Testimonials",
+        label:"Blogs",
     },
     {
         id:7,

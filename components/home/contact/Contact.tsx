@@ -25,33 +25,41 @@ const Contact = () => {
                             <p className='text-xl font-bold text-gray-400'>Mumbai, India</p>
                         </div>
                     </div>
-
                     {/*Social icons*/}
                     <div className='flex items-center mt-8 space-x-3'>
                         {/* LinkedIn */}
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#0077B5] transition-all duration-300'>
+                        <a href="https://www.linkedin.com/in/ved-chaudhari" target="_blank" rel="noopener noreferrer" className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#0077B5] transition-all duration-300'>
                             <FaLinkedin className='text-white w-6 h-6' />
-                        </div>
+                        </a>
 
                         {/* Instagram */}
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] transition-all duration-300'>
+                        <a href="https://www.instagram.com/vedchaudhari__07" target="_blank" rel="noopener noreferrer" className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] transition-all duration-300'>
                             <FaInstagram className='text-white w-6 h-6' />
-                        </div>
+                        </a>
 
                         {/* GitHub */}
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#181717] transition-all duration-300'>
+                        <a href="https://github.com/vedchaudhari" target="_blank" rel="noopener noreferrer" className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#181717] transition-all duration-300'>
                             <FaGithub className='text-white w-6 h-6' />
-                        </div>
+                        </a>
 
                         {/* LeetCode */}
-                        <div className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-linear-to-tr from-[#FFA116] to-[#F27C00] transition-all duration-300'>
-                            <FaCode className='text-white w-6 h-6' />
-                        </div>
+                        <a
+                            href="https://leetcode.com/u/codybuddy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='w-14 h-14 bg-blue-950/60 rounded-full flex items-center justify-center cursor-pointer hover:bg-linear-to-tr from-[#000000] to-[#a0702c] transition-all duration-300'
+                        >
+                            <img src="/images/leetcode.png" alt="LeetCode" className='w-6 h-6' />
+                        </a>
+
                     </div>
+
                 </div>
 
                 {/*form*/}
-                <div className='md:p-10 p-5 bg-[#131332] rounded-lg'>
+                <div
+                    data-aos="zoom-in" data-aos-delay="0"
+                    className='md:p-10 p-5 bg-[#131332] rounded-lg'>
                     <input
                         type="text"
                         placeholder='Name'
