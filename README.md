@@ -3,7 +3,7 @@
 </p>
 <p align="center"><h1 align="center">NEXTJS-PORTFOLIO</h1></p>
 <p align="center">
-    <em><code>❯ REPLACE-ME</code></em>
+    <em><code>❯ A modern, responsive portfolio website built with Next.js 16, showcasing professional experience, projects, and skills with interactive animations and particle effects.</code></em>
 </p>
 <p align="center">
     <img src="https://img.shields.io/github/license/vedchaudhari/nextjs-portfolio?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
@@ -38,13 +38,20 @@
 
 ##  Overview
 
-<code>❯ REPLACE-ME</code>
+A professional portfolio website built with Next.js 16 and TypeScript, featuring a modern dark theme with interactive animations. The portfolio showcases professional experience, projects, technical skills, and includes sections for expertise, work experience, education, project gallery, skills visualization, blog posts, and contact information. Built with performance and user experience in mind, utilizing cutting-edge web technologies.
 
 ---
 
 ##  Features
 
-<code>❯ REPLACE-ME</code>
+- **Interactive Hero Section** - Dynamic particle background with typewriter effect
+- **Responsive Navigation** - Mobile-friendly navbar with smooth scrolling
+- **Professional Sections** - Expertise, experience, projects, skills, blogs, and contact
+- **Project Showcase** - Interactive project cards with live demos and GitHub links
+- **Skills Visualization** - Animated skill cards with percentage indicators
+- **Contact Form** - Professional contact section with social media links
+- **Smooth Animations** - AOS (Animate On Scroll) and Framer Motion effects
+- **Modern UI/UX** - Dark theme with cyan accents and glassmorphism effects
 
 ---
 
@@ -89,27 +96,27 @@
             <table>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/package-lock.json'>package-lock.json</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>Package lock file for dependency management</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/next.config.ts'>next.config.ts</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>Next.js configuration file</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/tsconfig.json'>tsconfig.json</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>TypeScript configuration</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/eslint.config.mjs'>eslint.config.mjs</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>ESLint configuration for code quality</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/postcss.config.mjs'>postcss.config.mjs</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>PostCSS configuration for Tailwind CSS</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/package.json'>package.json</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>Package dependencies and scripts configuration</td>
             </tr>
             </table>
         </blockquote>
@@ -123,7 +130,7 @@
                     <table>
                     <tr>
                         <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/Home.tsx'>Home.tsx</a></b></td>
-                        <td><code>❯ REPLACE-ME</code></td>
+                        <td>Main home page component with all sections</td>
                     </tr>
                     </table>
                     <details>
@@ -132,7 +139,7 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/skills/Skills.tsx'>Skills.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Skills section with animated skill cards</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -143,11 +150,11 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/resume/ResumeCard.tsx'>ResumeCard.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Resume card component for experience/education</td>
                             </tr>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/resume/Resume.tsx'>Resume.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Resume section with work experience and education</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -158,7 +165,7 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/projects/Projects.tsx'>Projects.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Projects showcase with interactive cards</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -169,15 +176,15 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/navbar/MobileNavbar.tsx'>MobileNavbar.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Mobile navigation component</td>
                             </tr>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/navbar/Navbar.tsx'>Navbar.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Desktop navigation component</td>
                             </tr>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/navbar/ResponsiveNavbar.tsx'>ResponsiveNavbar.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Responsive navigation wrapper</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -188,7 +195,7 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/contact/Contact.tsx'>Contact.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Contact section with form and social links</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -199,11 +206,11 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/services/ServiceCard.tsx'>ServiceCard.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Service card component for expertise section</td>
                             </tr>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/services/Services.tsx'>Services.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Services/expertise section</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -214,11 +221,11 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/hero/ParticleBackground.tsx'>ParticleBackground.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Particle background for hero section</td>
                             </tr>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/hero/Hero.tsx'>Hero.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Hero section with typewriter effect and CTA</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -229,11 +236,11 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/blog/Blog.tsx'>Blog.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Blog section component</td>
                             </tr>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/blog/BlogCard.tsx'>BlogCard.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Individual blog card component</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -244,7 +251,7 @@
                             <table>
                             <tr>
                                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/footer/Footer.tsx'>Footer.tsx</a></b></td>
-                                <td><code>❯ REPLACE-ME</code></td>
+                                <td>Footer component</td>
                             </tr>
                             </table>
                         </blockquote>
@@ -259,7 +266,7 @@
             <table>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/constant/constant.ts'>constant.ts</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>Navigation links and constants configuration</td>
             </tr>
             </table>
         </blockquote>
@@ -270,15 +277,15 @@
             <table>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/layout.tsx'>layout.tsx</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>Root layout with navigation and footer</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/globals.css'>globals.css</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>Global CSS styles with Tailwind CSS</td>
             </tr>
             <tr>
                 <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/page.tsx'>page.tsx</a></b></td>
-                <td><code>❯ REPLACE-ME</code></td>
+                <td>Main page component rendering Home</td>
             </tr>
             </table>
             <details>
@@ -293,7 +300,7 @@
                                     <table>
                                     <tr>
                                         <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/about/team/[name]/page.tsx'>page.tsx</a></b></td>
-                                        <td><code>❯ REPLACE-ME</code></td>
+                                        <td>Dynamic team member page</td>
                                     </tr>
                                     </table>
                                 </blockquote>
@@ -350,7 +357,7 @@ Run nextjs-portfolio using the following command:
 **Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
-❯ npm start
+❯ npm run dev
 ```
 
 
@@ -366,9 +373,13 @@ Run the test suite using the following command:
 ---
 ##  Project Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Hero Section`**: <strike>Interactive hero with particle background and typewriter effect.</strike>
+- [X] **`Portfolio Sections`**: <strike>Complete sections for expertise, experience, projects, skills, blogs, and contact.</strike>
+- [X] **`Responsive Design`**: <strike>Mobile-first responsive design with modern UI/UX.</strike>
+- [X] **`Animations`**: <strike>Smooth animations using AOS and Framer Motion.</strike>
+- [ ] **`Contact API`**: Implement backend API for contact form functionality.
+- [ ] **`Blog CMS`**: Add content management system for blog posts.
+- [ ] **`Dark/Light Mode`**: Add theme toggle functionality.
 
 ---
 
