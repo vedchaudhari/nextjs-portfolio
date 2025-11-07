@@ -1,8 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiEnvelope, BiLogoLinkedin, BiMap } from 'react-icons/bi'
 import { FaCode, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        mobile: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState('');
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus('');
+
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSubmitStatus('Message sent successfully! I\'ll get back to you soon.');
+                setFormData({ name: '', email: '', mobile: '', message: '' });
+            } else {
+                setSubmitStatus('Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            setSubmitStatus('Network error. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <div className='pt-16 pb-16'>
             <div className='w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
@@ -60,27 +103,63 @@ const Contact = () => {
                 <div
                     data-aos="zoom-in" data-aos-delay="0"
                     className='md:p-10 p-5 bg-[#131332] rounded-lg'>
-                    <input
-                        type="text"
-                        placeholder='Name'
-                        className='px-4 py-3.5 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
-                    />
-                    <input
-                        type="email"
-                        placeholder='Email Address'
-                        className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
-                    />
-                    <input
-                        type="text"
-                        placeholder='Mobile no.'
-                        className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
-                    />
-                    <textarea
-                        placeholder='Your Message'
-                        className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70 h-[10rem] resize-none scroll-m-0'
-                    />
 
-                    <button className='mt-8 px-12 py-4 bg-blue-950 hover:bg-blue-900 transition-all duration-300 cursor-pointer text-white rounded-full '>Send Message</button>
+                    {submitStatus && (
+                        <div className={`mb-6 p-4 rounded-md ${submitStatus.includes('successfully')
+                                ? 'bg-green-900/20 border border-green-500 text-green-400'
+                                : 'bg-red-900/20 border border-red-500 text-red-400'
+                            }`}>
+                            {submitStatus}
+                        </div>
+                    )}
+
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            placeholder='Name'
+                            required
+                            className='px-4 py-3.5 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            placeholder='Email Address'
+                            required
+                            className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
+                        />
+                        <input
+                            type="text"
+                            name="mobile"
+                            value={formData.mobile}
+                            onChange={handleInputChange}
+                            placeholder='Mobile no.'
+                            className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70'
+                        />
+                        <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            placeholder='Your Message'
+                            required
+                            className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-md w-full placeholder:text-white/70 h-[10rem] resize-none scroll-m-0'
+                        />
+
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className={`mt-8 px-12 py-4 transition-all duration-300 text-white rounded-full ${isSubmitting
+                                    ? 'bg-gray-600 cursor-not-allowed'
+                                    : 'bg-blue-950 hover:bg-blue-900 cursor-pointer'
+                                }`}
+                        >
+                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                        </button>
+                    </form>
 
                 </div>
             </div>
