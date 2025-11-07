@@ -48,7 +48,8 @@ const Contact = () => {
 
     return (
         <div className='pt-16 pb-16'>
-            <div className='w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
+            <div data-aos="fade-up" data-aos-delay="100"
+                className='w-[90%] md:w-[80%] lg:w-[70%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
                 {/*Text Content*/}
                 <div >
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-200">
@@ -100,14 +101,12 @@ const Contact = () => {
                 </div>
 
                 {/*form*/}
-                <div
-                    data-aos="zoom-in" data-aos-delay="0"
-                    className='md:p-10 p-5 bg-[#131332] rounded-lg'>
+                <div className='md:p-10 p-5 bg-[#131332] rounded-lg'>
 
                     {submitStatus && (
                         <div className={`mb-6 p-4 rounded-md ${submitStatus.includes('successfully')
-                                ? 'bg-green-900/20 border border-green-500 text-green-400'
-                                : 'bg-red-900/20 border border-red-500 text-red-400'
+                            ? 'bg-green-900/20 border border-green-500 text-green-400'
+                            : 'bg-red-900/20 border border-red-500 text-red-400'
                             }`}>
                             {submitStatus}
                         </div>
@@ -153,8 +152,8 @@ const Contact = () => {
                             type="submit"
                             disabled={isSubmitting}
                             className={`mt-8 px-12 py-4 transition-all duration-300 text-white rounded-full ${isSubmitting
-                                    ? 'bg-gray-600 cursor-not-allowed'
-                                    : 'bg-blue-950 hover:bg-blue-900 cursor-pointer'
+                                ? 'bg-gray-600 cursor-not-allowed'
+                                : 'bg-blue-950 hover:bg-blue-900 cursor-pointer'
                                 }`}
                         >
                             {isSubmitting ? 'Sending...' : 'Send Message'}
