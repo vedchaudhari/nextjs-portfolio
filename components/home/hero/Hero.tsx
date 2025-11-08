@@ -9,9 +9,12 @@ import ParticlesHero from './ParticleBackground'
 
 const Hero = () => {
     return (
-        <div className="relative h-screen flex items-center justify-center text-white overflow-hidden flex-col lg:pt-20">
-            <ParticlesHero />
-            <div className='relative z-10 flex flex-col items-center'>
+        <div className="relative h-screen flex items-center justify-center text-white overflow-hidden flex-col lg:pt-20 select-none">
+            <div className="pointer-events-none absolute inset-0">
+                <ParticlesHero />
+            </div>
+
+            <div className='relative flex flex-col items-center'>
                 <Image
                     src="/images/s12.png"
                     alt="heroimage" width={150}
@@ -50,7 +53,7 @@ const Hero = () => {
                 }}
                 data-aos="fade-up"
                 data-aos-delay="600"
-                className='mt-6 px-10 py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-lg font-medium flex items-center justify-center gap-2 z-[10002] cursor-pointer'
+                className='mt-6 px-10 py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-lg font-medium flex items-center justify-center gap-2 cursor-pointer'
             >
                 <span>See my work</span>
                 <BsArrowRight className='w-5 h-5' />
