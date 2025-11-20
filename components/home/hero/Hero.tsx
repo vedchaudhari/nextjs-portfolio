@@ -14,15 +14,19 @@ const Hero = () => {
                 <ParticlesHero />
             </div>
 
+            {/* Profile Image - Simple and Clean */}
             <div className='relative flex flex-col items-center'>
                 <Image
                     src="/images/s12.png"
-                    alt="heroimage" width={150}
+                    alt="Ved Chaudhari - Portfolio"
+                    width={150}
                     height={150}
-                    className='rounded-full border-8 border-[#0c0c48aa] animate-float hover:border-cyan-400 transition-all duration-300'
+                    className='rounded-full border-8 border-[#0c0c48aa] animate-float transition-all duration-500 shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)]'
                     data-aos="fade-up"
+                    priority
                 />
             </div>
+
             <h1 data-aos="fade-up" data-aos-delay="200" className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-6 text-center font-bold tracking-wide px-4'>
                 Creating web products,<br />
                 brands <span className='text-cyan-200'>and experiences.</span>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
 }
@@ -65,9 +66,12 @@ body {
 
 /* Floating Animation */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -79,9 +83,12 @@ body {
 
 /* Pulse Glow Animation */
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
   }
+
   50% {
     box-shadow: 0 0 25px rgba(6, 182, 212, 0.6);
   }
@@ -89,4 +96,19 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Slow Spin Animation for Ring */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
 }
