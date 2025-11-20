@@ -25,7 +25,7 @@ const Navbar = ({ openNav }: Props) => {
 
 
     return (
-        <div className={`transition-all ${navBg ? "bg-[#0f142ed9] shadow-md" : "fixed"} duration-200 h-[12vh] z-10000 fixed w-full`} >
+        <div className={`transition-all ${navBg ? "bg-[#0f142ed9] shadow-md backdrop-blur-md" : "fixed"} duration-200 h-[12vh] z-[1000] fixed w-full`} >
             <div className='flex items-center h-full justify-between w-[90%] mx-auto '>
                 {/*LOGO*/}
                 <div
@@ -45,8 +45,9 @@ const Navbar = ({ openNav }: Props) => {
                     {
                         NavLinks.map((link) => {
                             return (
-                                <Link key={link.id} href={link.url} className="text-base hover:text-cyan-300 text-white font-medium transition-all duration-200">
+                                <Link key={link.id} href={link.url} className="text-base hover:text-cyan-300 text-white font-medium transition-all duration-300 hover:scale-110 relative group">
                                     <p>{link.label}</p>
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300"></span>
                                 </Link>
                             )
                         })
@@ -56,7 +57,7 @@ const Navbar = ({ openNav }: Props) => {
                 <div className='flex items-center space-x-4'>
                     {/*CV button*/}
                     <button
-                        className='px-8 py-3 text-sm cursor-pointer rounded-lg bg-blue-800 hover:bg-blue-900 transition-all duration-300 text-white flex items-center space-x-2'
+                        className='px-8 py-3 text-sm cursor-pointer rounded-lg bg-blue-800 hover:bg-blue-900 transition-all duration-300 text-white flex items-center space-x-2 hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]'
                         onClick={() => {
                             const link = document.createElement('a');
                             link.href = '/pdfs/Ved_Chaudhari_Resume.pdf';

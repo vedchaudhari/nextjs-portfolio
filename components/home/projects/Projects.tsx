@@ -33,13 +33,13 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="pt-16 pb-16">
+        <div className="pt-16 pb-16 px-4">
             <h1 className="text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white">
                 A small selection of recent <br />
                 <span className="text-cyan-300">projects</span>
             </h1>
 
-            <div className="w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
+            <div className="w-[95%] sm:w-[90%] lg:w-[85%] xl:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mt-16">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -47,26 +47,28 @@ const Projects = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: project.delay }}
                         whileHover={{ scale: 1.03 }}
-                        className="bg-white/5 backdrop-blur-lg rounded-xl p-4 hover:shadow-[0_0_20px_rgba(0,255,255,0.3)] transition-shadow"
+                        className="glass-effect rounded-xl p-4 sm:p-6 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all duration-300 group"
                     >
-                        <Image
-                            src={project.img}
-                            alt={project.title}
-                            width={800}
-                            height={650}
-                            className="rounded-lg"
-                        />
-                        <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
+                        <div className='overflow-hidden rounded-lg'>
+                            <Image
+                                src={project.img}
+                                alt={project.title}
+                                width={800}
+                                height={650}
+                                className="rounded-lg group-hover:scale-110 transition-transform duration-500"
+                            />
+                        </div>
+                        <h1 className="mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
                             {project.title}
                         </h1>
-                        <h2 className="pt-2 font-medium text-white/80">{project.subtitle}</h2>
+                        <h2 className="pt-2 font-medium text-white/80 text-sm sm:text-base">{project.subtitle}</h2>
 
-                        <div className="flex gap-4 mt-4">
+                        <div className="flex gap-3 sm:gap-4 mt-4 flex-wrap">
                             <a
                                 href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg text-white text-sm transition"
+                                className="flex items-center gap-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg text-white text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]"
                             >
                                 <Github size={18} /> GitHub
                             </a>
@@ -74,7 +76,7 @@ const Projects = () => {
                                 href={project.live}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-sm transition"
+                                className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white text-sm transition-all duration-300 hover:scale-105"
                             >
                                 <Globe size={18} /> Live
                             </a>

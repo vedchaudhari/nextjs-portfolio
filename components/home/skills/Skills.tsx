@@ -32,12 +32,12 @@ const skills = [
 
 const Skills = () => {
     return (
-        <div className="text-white pt-16 pb-16 overflow-hidden">
+        <div className="text-white pt-16 pb-16 overflow-hidden px-4">
             <h1 className="text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white">
                 My <span className="text-cyan-300">Skills</span>
             </h1>
 
-            <div className="flex flex-wrap justify-center gap-6 mt-16 px-4 md:px-0">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-16 px-2 md:px-4">
                 {skills.map((skill, i) => (
                     <motion.div
                         key={skill.name}
@@ -59,14 +59,14 @@ const Skills = () => {
                             transitionSpeed={1000}
                             gyroscope={true}
                         >
-                            <div className="bg-[#14134160] text-center w-36 h-44 sm:w-40 sm:h-48 rounded-3xl flex flex-col items-center justify-center shadow-lg hover:shadow-[0_0_15px_#00ffff50] transition-all duration-300 ease-out hover:scale-105">
-                                <div className="text-4xl sm:text-5xl mb-4 text-gray-300">
+                            <div className="glass-effect text-center w-32 h-40 sm:w-40 sm:h-48 md:w-44 md:h-52 rounded-3xl flex flex-col items-center justify-center shadow-lg hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] transition-all duration-300 ease-out hover:scale-105 group">
+                                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-gray-300 group-hover:text-cyan-300 transition-colors duration-300 group-hover:scale-110">
                                     {skill.icon}
                                 </div>
-                                <p className="text-xl sm:text-2xl font-semibold">
+                                <p className="text-xl sm:text-2xl font-semibold group-hover:text-cyan-200 transition-colors duration-300">
                                     {skill.percentage}%
                                 </p>
-                                <p className="text-purple-400 mt-1 text-sm sm:text-base">
+                                <p className="text-purple-400 mt-1 text-xs sm:text-sm md:text-base px-2 group-hover:text-purple-300 transition-colors duration-300">
                                     {skill.name}
                                 </p>
                             </div>

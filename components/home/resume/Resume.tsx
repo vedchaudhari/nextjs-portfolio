@@ -24,8 +24,8 @@ const fadeUp = (i: number) => ({
 
 const Resume: React.FC = () => {
     return (
-        <div className="pt-20 pb-16">
-            <div className="w-[90%] sm:w-[70%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10">
+        <div className="pt-20 pb-16 px-4">
+            <div className="w-[95%] sm:w-[90%] lg:w-[85%] xl:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 lg:gap-16">
                 {/* Work Experience */}
                 <div>
                     <h1 className="text-3xl sm:text-4xl font-bold text-white">
@@ -86,7 +86,7 @@ const Resume: React.FC = () => {
                                 description={
                                     <ul className="list-disc pl-6 space-y-1">
                                         <li>
-                                            Developed and deployed company’s official website with
+                                            Developed and deployed company's official website with
                                             modern UI/UX practices.
                                         </li>
                                         <li>
@@ -118,7 +118,7 @@ const Resume: React.FC = () => {
                                 description={
                                     <ul className="list-disc pl-6 space-y-1">
                                         <li>
-                                            Graduated with a Bachelor’s in Computer Engineering.
+                                            Graduated with a Bachelor's in Computer Engineering.
                                         </li>
                                         <li>
                                             Built strong foundation in software development &
