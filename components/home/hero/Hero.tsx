@@ -15,7 +15,7 @@ const Hero = () => {
         <ParticlesHero />
       </div>
 
-      {/* Profile Image */}
+      {/* Profile Image*/}
       <div className="relative flex flex-col items-center">
         <Image
           src="/images/s12.png"
