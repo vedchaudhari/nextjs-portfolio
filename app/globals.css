@@ -112,3 +112,15 @@ body {
 .animate-spin-slow {
   animation: spin-slow 3s linear infinite;
 }
+
+
+/* /styles/globals.css or any global file */
+.typewriter-fix {
+  display: inline-block;
+  white-space: nowrap;       /* Prevent random line breaks */
+}
+
+.Typewriter__wrapper,
+.Typewriter__cursor {
+  display: inline-block;     /* Prevent flicker */
+}
