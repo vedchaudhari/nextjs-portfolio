@@ -59,16 +59,21 @@ const Skills = () => {
                             transitionSpeed={1000}
                             gyroscope={true}
                         >
-                            <div className="glass-effect text-center w-32 h-40 sm:w-40 sm:h-48 md:w-44 md:h-52 rounded-3xl flex flex-col items-center justify-center shadow-lg hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] transition-all duration-300 ease-out hover:scale-105 group">
-                                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-gray-300 group-hover:text-cyan-300 transition-colors duration-300 group-hover:scale-110">
+                            <div className="glass-effect text-center w-32 h-40 sm:w-40 sm:h-48 md:w-44 md:h-52 rounded-3xl flex flex-col items-center justify-center shadow-lg hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] transition-all duration-300 ease-out hover:scale-105 group relative overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
+                                {/* 3D Depth Layer */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-gray-300 group-hover:text-cyan-300 transition-colors duration-300 group-hover:scale-110 relative z-10" style={{ transform: 'translateZ(40px)' }}>
                                     {skill.icon}
                                 </div>
-                                <p className="text-xl sm:text-2xl font-semibold group-hover:text-cyan-200 transition-colors duration-300">
-                                    {skill.percentage}%
-                                </p>
-                                <p className="text-purple-400 mt-1 text-xs sm:text-sm md:text-base px-2 group-hover:text-purple-300 transition-colors duration-300">
-                                    {skill.name}
-                                </p>
+                                <div style={{ transform: 'translateZ(20px)' }}>
+                                    <p className="text-xl sm:text-2xl font-semibold group-hover:text-cyan-200 transition-colors duration-300">
+                                        {skill.percentage}%
+                                    </p>
+                                    <p className="text-purple-400 mt-1 text-xs sm:text-sm md:text-base px-2 group-hover:text-purple-300 transition-colors duration-300">
+                                        {skill.name}
+                                    </p>
+                                </div>
                             </div>
                         </Tilt>
                     </motion.div>
