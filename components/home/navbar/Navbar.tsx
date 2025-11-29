@@ -25,7 +25,7 @@ const Navbar = ({ openNav }: Props) => {
 
 
     return (
-        <div className={`transition-all ${navBg ? "bg-[#0f142ed9] shadow-md backdrop-blur-md" : "fixed"} duration-200 h-[12vh] z-[1000] fixed w-full`} >
+        <nav className={`transition-all ${navBg ? "bg-[#0f142ed9] shadow-md backdrop-blur-md" : "fixed"} duration-200 h-[12vh] z-[1000] fixed w-full`} >
             <div className='flex items-center h-full justify-between w-[90%] mx-auto '>
                 {/*LOGO*/}
                 <div
@@ -35,7 +35,7 @@ const Navbar = ({ openNav }: Props) => {
                     <div className='w-10 h-10 bg-white rounded-full flex items-center justify-center flex-col'>
                         <FaCode className='w-5 h-5 text-black' />
                     </div>
-                    <h1 className="text-xl text-white">Ved</h1>
+                    <div className="text-xl text-white font-bold">Ved</div>
                 </div>
 
 
@@ -79,7 +79,7 @@ const Navbar = ({ openNav }: Props) => {
 
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }
 
