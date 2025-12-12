@@ -44,7 +44,7 @@ const Contact = () => {
                 setSubmitStatus(data.message || 'Message sent successfully! I\'ll get back to you soon.');
                 setFormData({ name: '', email: '', mobile: '', message: '' });
             } else {
-                // Show specific error message from backend
+                //  Show specific error message from backend
                 if (data.errors && data.errors.length > 0) {
                     const errorMessages = data.errors.map((err: any) => err.message).join(', ');
                     setSubmitStatus(`Validation error: ${errorMessages}`);
