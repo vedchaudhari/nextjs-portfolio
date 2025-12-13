@@ -3,6 +3,51 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Globe } from 'lucide-react'
+import Tilt from "react-parallax-tilt";
+
+const ProjectCard = ({ project }: { project: any }) => (
+    <div className="glass-effect h-full rounded-xl p-4 sm:p-6 hover:shadow-[0_10px_30px_rgba(6,182,212,0.2)] transition-all duration-300 group border border-white/10 hover:border-cyan-400/50 relative overflow-hidden flex flex-col hover:-translate-y-1" style={{ transformStyle: 'preserve-3d' }}>
+        {/* 3D Depth Effect Layer */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+        <div className='overflow-hidden rounded-lg relative shadow-md group-hover:shadow-cyan-500/20 transition-all duration-500' style={{ transform: 'translateZ(20px)' }}>
+            <Image
+                src={project.img}
+                alt={project.title}
+                width={800}
+                height={650}
+                className="rounded-lg group-hover:scale-105 transition-transform duration-500 object-cover"
+            />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+        </div>
+
+        <div className="flex-grow flex flex-col" style={{ transform: 'translateZ(30px)' }}>
+            <h1 className="mt-6 text-lg sm:text-xl md:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 drop-shadow-md">
+                {project.title}
+            </h1>
+            <h2 className="pt-2 font-medium text-white/70 text-sm sm:text-base group-hover:text-white/90 transition-colors">{project.subtitle}</h2>
+
+            <div className="flex gap-3 sm:gap-4 mt-6 flex-wrap mt-auto">
+                <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-5 py-2.5 bg-cyan-900/40 hover:bg-cyan-600 border border-cyan-500/30 hover:border-cyan-400 rounded-lg text-white text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm"
+                >
+                    <Github size={18} /> <span className="font-medium">GitHub</span>
+                </a>
+                <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-lg text-white text-sm transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                >
+                    <Globe size={18} /> <span className="font-medium">Live Demo</span>
+                </a>
+            </div>
+        </div>
+    </div>
+);
 
 
 const projects = [
@@ -47,43 +92,23 @@ const Projects = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: project.delay }}
-                            className="glass-effect h-full rounded-xl p-4 sm:p-6 hover:shadow-[0_10px_30px_rgba(6,182,212,0.2)] transition-all duration-300 group border border-white/10 hover:border-cyan-400/50 relative overflow-hidden flex flex-col hover:-translate-y-1"
+                            className="h-full"
                         >
-                            <div className='overflow-hidden rounded-lg relative shadow-md group-hover:shadow-cyan-500/20 transition-all duration-500'>
-                                <Image
-                                    src={project.img}
-                                    alt={project.title}
-                                    width={800}
-                                    height={650}
-                                    className="rounded-lg group-hover:scale-105 transition-transform duration-500 object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+                            <div className="hidden lg:block h-full">
+                                <Tilt
+                                    tiltMaxAngleX={10}
+                                    tiltMaxAngleY={10}
+                                    perspective={1000}
+                                    scale={1.02}
+                                    transitionSpeed={1000}
+                                    gyroscope={false}
+                                    className="h-full"
+                                >
+                                    <ProjectCard project={project} />
+                                </Tilt>
                             </div>
-
-                            <div className="flex-grow flex flex-col">
-                                <h1 className="mt-6 text-lg sm:text-xl md:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 drop-shadow-md">
-                                    {project.title}
-                                </h1>
-                                <h2 className="pt-2 font-medium text-white/70 text-sm sm:text-base group-hover:text-white/90 transition-colors">{project.subtitle}</h2>
-
-                                <div className="flex gap-3 sm:gap-4 mt-6 flex-wrap mt-auto">
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 px-5 py-2.5 bg-cyan-900/40 hover:bg-cyan-600 border border-cyan-500/30 hover:border-cyan-400 rounded-lg text-white text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] backdrop-blur-sm"
-                                    >
-                                        <Github size={18} /> <span className="font-medium">GitHub</span>
-                                    </a>
-                                    <a
-                                        href={project.live}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-lg text-white text-sm transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-                                    >
-                                        <Globe size={18} /> <span className="font-medium">Live Demo</span>
-                                    </a>
-                                </div>
+                            <div className="block lg:hidden h-full">
+                                <ProjectCard project={project} />
                             </div>
                         </motion.div>
                     </div>

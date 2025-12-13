@@ -19,7 +19,8 @@ const Home = () => {
                 duration: 1000,
                 easing: 'ease',
                 once: true,
-                anchorPlacement: 'top-bottom'
+                anchorPlacement: 'top-bottom',
+                disable: 'mobile' // Disable animations on mobile devices
             });
         };
 

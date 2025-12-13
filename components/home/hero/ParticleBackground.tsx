@@ -29,6 +29,20 @@ export default function ParticlesHero() {
     console.log(container);
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Set initial value
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const options: ISourceOptions = useMemo(
     () => ({
       background: {
@@ -40,11 +54,11 @@ export default function ParticlesHero() {
       fpsLimit: 60,
       interactivity: {
         events: {
-          onClick: { enable: false, mode: "push" }, // Disabled heavy click interaction
-          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: !isMobile, mode: "push" }, // Enable click only on desktop
+          onHover: { enable: !isMobile, mode: "repulse" }, // Enable hover only on desktop
         },
         modes: {
-          push: { quantity: 4 },
+          push: { quantity: 2 }, // Reduced from 4
           repulse: { distance: 100, duration: 0.4 },
         },
       },
@@ -54,26 +68,26 @@ export default function ParticlesHero() {
           color: "#ffffff",
           distance: 150,
           enable: true,
-          opacity: 0.3, // Lower opacity for better performance
+          opacity: isMobile ? 0.3 : 0.5, // Lower opacity on mobile
           width: 1,
         },
         move: {
           direction: MoveDirection.none,
           enable: true,
           outModes: { default: OutMode.out },
-          speed: 1, // Slower movement is less taxing
+          speed: isMobile ? 0.5 : 2, // Slower on mobile, normal on desktop
         },
         number: {
-          density: { enable: true, area: 1200 }, // Increased area to spread them out more
-          value: 60, // Reduced from 60
+          density: { enable: true, area: isMobile ? 1200 : 800 },
+          value: isMobile ? 20 : 60, // 20 on mobile, 60 on desktop
         },
-        opacity: { value: 0.4 }, // Lower opacity
+        opacity: { value: isMobile ? 0.4 : 0.5 },
         shape: { type: "circle" },
-        size: { value: { min: 1, max: 3 } }, // Slightly smaller particles
+        size: { value: { min: 1, max: isMobile ? 3 : 4 } },
       },
       detectRetina: true,
     }),
-    []
+    [isMobile]
   );
 
   if (!init) return null;
