@@ -1,5 +1,6 @@
+"use client";
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Tilt from 'react-parallax-tilt'
 
 type Props = {
@@ -9,6 +10,17 @@ type Props = {
 }
 
 const ServiceCard = ({ icon, name, description }: Props) => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <Tilt
             tiltMaxAngleX={10}
@@ -18,6 +30,7 @@ const ServiceCard = ({ icon, name, description }: Props) => {
             transitionSpeed={1000}
             gyroscope={true}
             className="h-full"
+            tiltEnable={!isMobile}
         >
             <div className='glass-effect p-8 rounded-2xl h-full hover:shadow-[0_20px_50px_rgba(6,182,212,0.3)] transition-all duration-300 group cursor-pointer border border-white/5 hover:border-cyan-400/30 relative overflow-hidden' style={{ transformStyle: 'preserve-3d' }}>
                 {/* 3D Depth Layer */}
