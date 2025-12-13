@@ -65,7 +65,7 @@ export default function ParticlesHero() {
         },
         number: {
           density: { enable: true, area: 1200 }, // Increased area to spread them out more
-          value: 400, // Reduced from 60
+          value: 200, // Reduced from 60
         },
         opacity: { value: 0.4 }, // Lower opacity
         shape: { type: "circle" },
