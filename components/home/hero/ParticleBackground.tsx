@@ -32,7 +32,7 @@ export default function ParticlesHero() {
   const options: ISourceOptions = useMemo(
     () => ({
       background: {
-        color: { value: "transparent" }, // Transparent for overlay use
+        color: { value: "transparent" },
       },
       fullScreen: {
         enable: false,
@@ -40,7 +40,7 @@ export default function ParticlesHero() {
       fpsLimit: 60,
       interactivity: {
         events: {
-          onClick: { enable: true, mode: "push" },
+          onClick: { enable: false, mode: "push" }, // Disabled heavy click interaction
           onHover: { enable: true, mode: "repulse" },
         },
         modes: {
@@ -54,22 +54,22 @@ export default function ParticlesHero() {
           color: "#ffffff",
           distance: 150,
           enable: true,
-          opacity: 0.4,
+          opacity: 0.3, // Lower opacity for better performance
           width: 1,
         },
         move: {
           direction: MoveDirection.none,
           enable: true,
           outModes: { default: OutMode.out },
-          speed: 2,
+          speed: 1, // Slower movement is less taxing
         },
         number: {
-          density: { enable: true, area: 800 },
-          value: 60,
+          density: { enable: true, area: 1200 }, // Increased area to spread them out more
+          value: 30, // Reduced from 60
         },
-        opacity: { value: 0.5 },
+        opacity: { value: 0.4 }, // Lower opacity
         shape: { type: "circle" },
-        size: { value: { min: 1, max: 4 } },
+        size: { value: { min: 1, max: 3 } }, // Slightly smaller particles
       },
       detectRetina: true,
     }),

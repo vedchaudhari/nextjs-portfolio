@@ -13,7 +13,7 @@ import {
     SiTypescript,
     SiVercel,
 } from "react-icons/si";
-import Tilt from "react-parallax-tilt";
+
 import { motion } from "framer-motion";
 
 const skills = [
@@ -41,41 +41,27 @@ const Skills = () => {
                 {skills.map((skill, i) => (
                     <motion.div
                         key={skill.name}
-                        initial={{ opacity: 0, y: 40 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{
-                            type: "spring",
-                            stiffness: 120,
-                            damping: 12,
-                            delay: i * 0.07,
+                            duration: 0.4,
+                            delay: i * 0.05,
                         }}
                         viewport={{ once: true }}
                     >
-                        <Tilt
-                            tiltMaxAngleX={10}
-                            tiltMaxAngleY={10}
-                            perspective={800}
-                            scale={1.05}
-                            transitionSpeed={1000}
-                            gyroscope={true}
-                        >
-                            <div className="glass-effect text-center w-32 h-40 sm:w-40 sm:h-48 md:w-44 md:h-52 rounded-3xl flex flex-col items-center justify-center shadow-lg hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] transition-all duration-300 ease-out hover:scale-105 group relative overflow-hidden" style={{ transformStyle: 'preserve-3d' }}>
-                                {/* 3D Depth Layer */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-                                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-gray-300 group-hover:text-cyan-300 transition-colors duration-300 group-hover:scale-110 relative z-10" style={{ transform: 'translateZ(40px)' }}>
-                                    {skill.icon}
-                                </div>
-                                <div style={{ transform: 'translateZ(20px)' }}>
-                                    <p className="text-xl sm:text-2xl font-semibold group-hover:text-cyan-200 transition-colors duration-300">
-                                        {skill.percentage}%
-                                    </p>
-                                    <p className="text-purple-400 mt-1 text-xs sm:text-sm md:text-base px-2 group-hover:text-purple-300 transition-colors duration-300">
-                                        {skill.name}
-                                    </p>
-                                </div>
+                        <div className="glass-effect text-center w-32 h-40 sm:w-40 sm:h-48 md:w-44 md:h-52 rounded-3xl flex flex-col items-center justify-center shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 ease-out hover:-translate-y-2 group relative overflow-hidden border border-white/5 hover:border-cyan-500/30">
+                            <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-gray-300 group-hover:text-cyan-300 transition-colors duration-300 group-hover:scale-110 relative z-10">
+                                {skill.icon}
                             </div>
-                        </Tilt>
+                            <div>
+                                <p className="text-xl sm:text-2xl font-semibold group-hover:text-cyan-200 transition-colors duration-300">
+                                    {skill.percentage}%
+                                </p>
+                                <p className="text-purple-400 mt-1 text-xs sm:text-sm md:text-base px-2 group-hover:text-purple-300 transition-colors duration-300">
+                                    {skill.name}
+                                </p>
+                            </div>
+                        </div>
                     </motion.div>
                 ))}
             </div>

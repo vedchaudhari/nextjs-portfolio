@@ -11,11 +11,10 @@ import ResumeCard from "./ResumeCard";
 
 // Smooth fade & lift animation
 const fadeUp = (i: number) => ({
-    initial: { opacity: 0, y: 40, scale: 0.98 },
-    whileInView: { opacity: 1, y: 0, scale: 1 },
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
     transition: {
-        duration: 0.6,
-        ease: "easeOut" as const,
+        duration: 0.5,
         delay: i * 0.1,
     } satisfies Transition,
     viewport: { once: true },

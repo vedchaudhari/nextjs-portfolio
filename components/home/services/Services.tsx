@@ -8,21 +8,21 @@ const Services = () => {
                 My <span className='text-cyan-300'>Expertise</span>
             </h1>
             <div className='w-[95%] sm:w-[85%] lg:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 mt-16 lg:mt-20 items-center'>
-                <div data-aos="fade-right" data-aos-anchor-placement="top-center">
+                <div data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <ServiceCard
                         icon="/images/s1.png"
                         name="Web and Mobile App"
                         description="Designing and developing responsive, high-performance websites and mobile applications focused on seamless user experiences."
                     />
                 </div>
-                <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="100">
+                <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="100">
                     <ServiceCard
                         icon="/images/s2.png"
                         name="Backend Development"
                         description="Building secure, scalable, and high-performing backend systems that ensure smooth data flow and robust application logic."
                     />
                 </div>
-                <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="200">
+                <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="200">
                     <ServiceCard
                         icon="/images/s3.png"
                         name="API Integration"
