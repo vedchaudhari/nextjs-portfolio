@@ -19,7 +19,7 @@ const MobileNavbar = ({ closeNav, showNav }: Props) => {
       </div>
 
       {/*navlinks*/}
-      <div className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-gradient-to-br from-cyan-800 to-cyan-900 backdrop-blur-lg space-y-6 z-[1050] right-0 shadow-2xl`}>
+      <div className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-gradient-to-br backdrop-blur-lg space-y-6 z-[1050] right-0 shadow-2xl`}>
         {
           NavLinks.map((link) => {
             return (
