@@ -12,6 +12,11 @@ import {
     SiTailwindcss,
     SiTypescript,
     SiVercel,
+    SiAmazon,
+    SiDocker,
+    SiGooglecloud,
+    SiRabbitmq,
+    SiGithubactions,
 } from "react-icons/si";
 
 import { motion } from "framer-motion";
@@ -28,6 +33,12 @@ const skills = [
     { name: "API Testing", icon: <SiPostman />, percentage: 87 },
     { name: "Git", icon: <SiGithub />, percentage: 85 },
     { name: "Deployment", icon: <SiVercel />, percentage: 80 },
+    { name: "React Native", icon: <SiReact />, percentage: 90 },
+    { name: "AWS", icon: <SiAmazon />, percentage: 85 },
+    { name: "Docker", icon: <SiDocker />, percentage: 85 },
+    { name: "Cloud Computing", icon: <SiGooglecloud />, percentage: 85 },
+    { name: "RabbitMQ", icon: <SiRabbitmq />, percentage: 80 },
+    { name: "CI/CD", icon: <SiGithubactions />, percentage: 85 },
 ];
 
 const Skills = () => {
