@@ -81,23 +81,35 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                 className="glass-effect h-full rounded-xl p-4 sm:p-6 hover:shadow-[0_10px_30px_rgba(6,182,212,0.2)] transition-all duration-300 group border border-white/10 hover:border-cyan-400/50 relative overflow-hidden flex flex-col hover:-translate-y-1"
             >
                 <div className='overflow-hidden rounded-lg relative shadow-md group-hover:shadow-cyan-500/20 transition-all duration-500 aspect-[1.23/1]'>
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence initial={false}>
                         <motion.div
                             key={currentImageIndex}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
+                            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                             className="absolute inset-0"
                         >
                             <Image
                                 src={project.images[currentImageIndex]}
                                 alt={`${project.title} - Image ${currentImageIndex + 1}`}
                                 fill
-                                className={`rounded-lg group-hover:scale-105 transition-transform duration-500 ${project.title === 'Readsphere' ? 'object-contain' : 'object-cover'}`}
+                                priority={currentImageIndex === 0}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className={`rounded-lg group-hover:scale-110 transition-transform duration-700 ease-out ${project.title === 'Readsphere' ? 'object-contain px-4' : 'object-cover'}`}
                             />
                         </motion.div>
                     </AnimatePresence>
+
+                    {/* Performance Hack: Preload next image in the background */}
+                    <div className="hidden">
+                        <Image
+                            src={project.images[(currentImageIndex + 1) % project.images.length]}
+                            alt="preload"
+                            width={1}
+                            height={1}
+                        />
+                    </div>
 
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
 
