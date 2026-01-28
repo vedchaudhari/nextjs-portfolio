@@ -30,10 +30,10 @@ const projects = [
         ],
         title: 'Readsphere',
         subtitle: 'React Native Mobile App',
-        tech: ['React Native', 'Expo', 'JavaScript', 'Node.js', 'Docker', 'AWS', 'GitHub Actions', 'CI/CD', 'Nginx'],
+        tech: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Docker', 'AWS', 'GitHub Actions', 'CI/CD', 'Nginx'],
         github: 'https://github.com/vedchaudhari/rn-bookworm',
-        playLive: 'https://appetize.io/app/b_vbm72mjfxqsjl6siend6w2hzo4',
-        live: 'https://expo.dev/accounts/vedchaudhari07/projects/mobile/builds/7e517c21-b346-4939-8bfa-e6bde41c32cb',
+        playLive: 'https://appetize.io/app/b_emestmdogogtuylh27pbigjot4',
+        live: 'https://expo.dev/accounts/vedchaudhari/projects/readsphere/builds/3ca79db0-f113-40be-ae7e-956c7bbecfc0',
         liveLabel: 'Android Build',
         delay: 0.1
     },
@@ -41,7 +41,7 @@ const projects = [
         images: ['/images/chat0.jpg', '/images/chat1.png', '/images/chat2.png', '/images/chat3.png'],
         title: 'Convochat - Real Time Chat Application',
         subtitle: 'Full-Stack Web Application',
-        tech: ['React.js', 'Node.js', 'Socket.io', 'MongoDB', 'Express'],
+        tech: ['React.js', 'Node.js', 'Socket.io', 'MongoDB', 'Express', 'JavaScript'],
         github: 'https://github.com/vedchaudhari/convochat',
         live: 'https://convochat-app.onrender.com/',
         delay: 0.2
