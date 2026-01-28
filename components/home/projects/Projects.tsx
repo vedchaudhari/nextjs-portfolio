@@ -32,8 +32,8 @@ const projects = [
         subtitle: 'React Native Mobile App',
         tech: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Docker', 'AWS', 'GitHub Actions', 'CI/CD', 'Nginx'],
         github: 'https://github.com/vedchaudhari/rn-bookworm',
-        playLive: 'https://appetize.io/app/b_emestmdogogtuylh27pbigjot4',
-        live: 'https://expo.dev/accounts/vedchaudhari/projects/readsphere/builds/3ca79db0-f113-40be-ae7e-956c7bbecfc0',
+        playLive: 'https://appetize.io/app/b_c4esvfxx5mfyln23jirffy47re',
+        live: 'https://expo.dev/accounts/vedchaudhari/projects/readsphere/builds/e05d5e53-4340-4829-8cb3-10d0b0e3668c',
         liveLabel: 'Android Build',
         delay: 0.1
     },
