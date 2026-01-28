@@ -4,12 +4,13 @@ import Image from "next/image";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 import ParticlesHero from "./ParticleBackground";
 
 const Hero = () => {
   return (
     <div className="relative h-screen flex items-center justify-center text-white overflow-hidden flex-col lg:pt-20 select-none px-4">
-      
+
       {/* Background Particles */}
       <div className="pointer-events-none absolute inset-0">
         <ParticlesHero />
@@ -73,7 +74,14 @@ const Hero = () => {
       </h2>
 
       {/* Button */}
-      <button
+      <motion.button
+        whileHover={{
+          scale: 1.05,
+          backgroundColor: "#1e40af", // blue-800 to slightly lighter for feedback
+          boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)"
+        }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
         onClick={() => {
           const section = document.getElementById("work");
           if (section) {
@@ -82,11 +90,11 @@ const Hero = () => {
         }}
         data-aos="fade-up"
         data-aos-delay="600"
-        className="mt-8 px-8 sm:px-10 py-3 sm:py-4 bg-blue-800 hover:bg-blue-900 transition-all duration-300 rounded-full text-base sm:text-lg font-medium flex items-center justify-center gap-2 cursor-pointer hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] group"
+        className="mt-8 px-8 sm:px-10 py-3 sm:py-4 bg-blue-800 rounded-full text-base sm:text-lg font-medium flex items-center justify-center gap-2 cursor-pointer group"
       >
         <span>See my work</span>
         <BsArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-      </button>
+      </motion.button>
     </div>
   );
 };
