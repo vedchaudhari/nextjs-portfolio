@@ -77,7 +77,7 @@ const Hero = () => {
         <div className="mt-6 flex gap-4 text-xs sm:text-sm font-mono text-cyan-200/80 bg-black/40 backdrop-blur-md px-6 py-2 rounded-full border border-white/5 shadow-lg">
           <span>⚡ Available</span>
           <span className="text-white/20">|</span>
-          <span>🛠️ Backend Expert</span>
+          <span>🛠️ 1+ YOE Backend Engineer</span>
           <span className="text-white/20">|</span>
           <span>📍 Mumbai, India</span>
         </div>
