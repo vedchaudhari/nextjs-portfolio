@@ -23,77 +23,90 @@ const fadeUp = (i: number) => ({
 
 const Resume: React.FC = () => {
     return (
-        <div className="pt-20 pb-16 px-4">
-            <div className="w-[95%] sm:w-[90%] lg:w-[85%] xl:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 lg:gap-16">
+        <div className="pt-20 pb-16 px-4 overflow-hidden relative">
+            {/* Background elements */}
+            <div className="absolute top-20 left-0 w-full h-[500px] bg-cyan-900/10 blur-[100px] -z-10" />
+
+            <div className="w-[95%] sm:w-[90%] lg:w-[85%] xl:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 lg:gap-20">
                 {/* Work Experience */}
                 <div>
-                    <h1 className="text-3xl sm:text-4xl font-bold text-white">
-                        My Work <span className="text-cyan-200">Experience</span>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-12 flex items-center gap-4">
+                        <span className="w-12 h-2 bg-cyan-500 rounded-full shadow-[0_0_20px_cyan]" />
+                        Work <span className="bg-linear-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">Experience</span>
                     </h1>
 
-                    <div className="mt-10 space-y-8">
-                        <motion.div {...fadeUp(0)}>
+                    <div className="relative space-y-12 pl-8 sm:pl-12">
+                        {/* Connecting Line */}
+                        <div className="absolute left-[19px] sm:left-[23px] top-4 bottom-0 w-1 bg-linear-to-b from-cyan-500 via-blue-500 to-purple-600 shadow-[0_0_15px_rgba(6,182,212,0.4)]" />
+
+                        <motion.div {...fadeUp(0)} className="relative group">
+                            {/* Node Icon on Line */}
+                            <div className="absolute -left-[45px] sm:-left-[49px] top-0 w-14 h-14 bg-[#0f142e] border-4 border-cyan-500 rounded-full flex items-center justify-center z-10 shadow-[0_0_20px_rgba(6,182,212,0.6)] group-hover:scale-110 transition-transform duration-300">
+                                <SiNodedotjs className="w-7 h-7 text-cyan-300" />
+                            </div>
                             <ResumeCard
-                                Icon={SiNodedotjs}
-                                role="Node.js Developer - Wharf Street Strategies"
+                                date="Jan 2025 - Present"
+                                role="Node.js Developer - Wharf Street Studios"
                                 description={
-                                    <ul className="list-disc pl-6 space-y-1">
+                                    <ul className="list-disc pl-5 space-y-2 text-white/70 text-sm sm:text-base leading-relaxed">
                                         <li>
-                                            Built and optimized backend systems for real-time apps
-                                            like food delivery, ride, and LMS platforms.
+                                            Built scalable <span className="text-cyan-300 font-medium">REST APIs</span> & <span className="text-cyan-300 font-medium">WebSockets</span> using <span className="text-cyan-300 font-medium">Node.js</span> and <span className="text-cyan-300 font-medium">MongoDB</span> for high-traffic apps.
                                         </li>
                                         <li>
-                                            Developed RESTful APIs and improved performance via
-                                            caching and load optimization.
+                                            Reduced API latency by <span className="text-cyan-300 font-medium">40%</span> using <span className="text-cyan-300 font-medium">Redis</span> caching and async task queues.
                                         </li>
                                         <li>
-                                            Integrated payment gateways and handled secure
-                                            transaction workflows.
+                                            Architected real-time messaging with <span className="text-cyan-300 font-medium">Socket.IO</span>, achieving <span className="text-cyan-300 font-medium">sub-50ms</span> delivery.
+                                        </li>
+                                        <li>
+                                            Deployed on <span className="text-cyan-300 font-medium">AWS EC2</span> with <span className="text-cyan-300 font-medium">Nginx</span>, SSL, and Dockerized CI/CD pipelines.
                                         </li>
                                     </ul>
                                 }
                             />
                         </motion.div>
 
-                        <motion.div {...fadeUp(1)}>
+                        <motion.div {...fadeUp(1)} className="relative group">
+                            {/* Node Icon on Line */}
+                            <div className="absolute -left-[45px] sm:-left-[49px] top-0 w-14 h-14 bg-[#0f142e] border-4 border-blue-500 rounded-full flex items-center justify-center z-10 shadow-[0_0_20px_rgba(59,130,246,0.6)] group-hover:scale-110 transition-transform duration-300">
+                                <SiNodedotjs className="w-7 h-7 text-blue-300" />
+                            </div>
                             <ResumeCard
-                                Icon={SiNodedotjs}
-                                role="Node.js Intern - Wharf Street Studios"
+                                date="Oct 2024 - Jan 2025"
+                                role="Node.js Backend Intern - Wharf Street Studios"
                                 description={
-                                    <ul className="list-disc pl-6 space-y-1">
+                                    <ul className="list-disc pl-5 space-y-2 text-white/70 text-sm sm:text-base leading-relaxed">
                                         <li>
-                                            Built real-time in-game communication using Node.js and
-                                            Socket.IO for live clan announcements.
+                                            Developed multiplayer backend services (clans, leaderboards) using <span className="text-cyan-300 font-medium">Node.js</span> & <span className="text-cyan-300 font-medium">WebSockets</span>.
                                         </li>
                                         <li>
-                                            Integrated MongoDB for efficient chat persistence and
-                                            message handling.
+                                            Improved <span className="text-cyan-300 font-medium">MongoDB</span> query performance by <span className="text-cyan-300 font-medium">25%</span> via indexing and schema optimization.
                                         </li>
                                         <li>
-                                            Worked closely with game devs for seamless
-                                            client-server sync.
+                                            Maintained real-time game state for <span className="text-cyan-300 font-medium">10k+ active users</span>.
                                         </li>
                                     </ul>
                                 }
                             />
                         </motion.div>
 
-                        <motion.div {...fadeUp(2)}>
+                        <motion.div {...fadeUp(2)} className="relative group">
+                            {/* Node Icon on Line */}
+                            <div className="absolute -left-[45px] sm:-left-[49px] top-0 w-14 h-14 bg-[#0f142e] border-4 border-purple-500 rounded-full flex items-center justify-center z-10 shadow-[0_0_20px_rgba(168,85,247,0.6)] group-hover:scale-110 transition-transform duration-300">
+                                <FaLaptopCode className="w-7 h-7 text-purple-300" />
+                            </div>
                             <ResumeCard
-                                Icon={FaLaptopCode}
                                 role="Web Dev Intern - TryIO"
                                 description={
-                                    <ul className="list-disc pl-6 space-y-1">
+                                    <ul className="list-disc pl-5 space-y-2 text-white/70 text-sm sm:text-base leading-relaxed">
                                         <li>
-                                            Developed and deployed company's official website with
-                                            modern UI/UX practices.
+                                            Developed and deployed the company's official website using React and Node.js.
                                         </li>
                                         <li>
-                                            Focused on responsive design for all screen sizes.
+                                            Implemented responsive design ensuring compatibility across all device types.
                                         </li>
                                         <li>
-                                            Optimized performance for faster load and smooth
-                                            interaction.
+                                            Optimized frontend performance, improving page load speeds by 30%.
                                         </li>
                                     </ul>
                                 }
@@ -104,14 +117,20 @@ const Resume: React.FC = () => {
 
                 {/* Education */}
                 <div>
-                    <h1 className="text-3xl sm:text-4xl font-bold text-white">
-                        My <span className="text-cyan-200">Education</span>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-12 flex items-center gap-4">
+                        <span className="w-12 h-2 bg-purple-500 rounded-full shadow-[0_0_20px_purple]" />
+                        My <span className="bg-linear-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">Education</span>
                     </h1>
 
-                    <div className="mt-10 space-y-8">
-                        <motion.div {...fadeUp(3)}>
+                    <div className="relative space-y-12 pl-8 sm:pl-12">
+                        {/* Connecting Line */}
+                        <div className="absolute left-[19px] sm:left-[23px] top-4 bottom-0 w-1 bg-linear-to-b from-purple-500 via-pink-500 to-red-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]" />
+
+                        <motion.div {...fadeUp(3)} className="relative group">
+                            <div className="absolute -left-[45px] sm:-left-[49px] top-0 w-14 h-14 bg-[#0f142e] border-4 border-purple-500 rounded-full flex items-center justify-center z-10 shadow-[0_0_20px_rgba(168,85,247,0.6)] group-hover:scale-110 transition-transform duration-300">
+                                <FaGraduationCap className="w-7 h-7 text-purple-300" />
+                            </div>
                             <ResumeCard
-                                Icon={FaGraduationCap}
                                 date="Aug 2020 - May 2024"
                                 role="Bachelor of Computer Engineering – Rajiv Gandhi Institute of Technology, Mumbai"
                                 description={
@@ -132,9 +151,11 @@ const Resume: React.FC = () => {
                             />
                         </motion.div>
 
-                        <motion.div {...fadeUp(4)}>
+                        <motion.div {...fadeUp(4)} className="relative group">
+                            <div className="absolute -left-[45px] sm:-left-[49px] top-0 w-14 h-14 bg-[#0f142e] border-4 border-pink-500 rounded-full flex items-center justify-center z-10 shadow-[0_0_20px_rgba(236,72,153,0.6)] group-hover:scale-110 transition-transform duration-300">
+                                <FaSchool className="w-7 h-7 text-pink-300" />
+                            </div>
                             <ResumeCard
-                                Icon={FaSchool}
                                 date="June 2019 – June 2020"
                                 role="Intermediate Education – Narayana Junior College, Telangana"
                                 description={
@@ -147,9 +168,11 @@ const Resume: React.FC = () => {
                             />
                         </motion.div>
 
-                        <motion.div {...fadeUp(5)}>
+                        <motion.div {...fadeUp(5)} className="relative group">
+                            <div className="absolute -left-[45px] sm:-left-[49px] top-0 w-14 h-14 bg-[#0f142e] border-4 border-red-500 rounded-full flex items-center justify-center z-10 shadow-[0_0_20px_rgba(239,68,68,0.6)] group-hover:scale-110 transition-transform duration-300">
+                                <FaSchool className="w-7 h-7 text-red-300" />
+                            </div>
                             <ResumeCard
-                                Icon={FaSchool}
                                 date="June 2017 – March 2018"
                                 role="Secondary School Certificate (SSC) – Tapti Public School"
                                 description={

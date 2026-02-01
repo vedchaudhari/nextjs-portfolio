@@ -1,33 +1,53 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google"; // Switched to Outfit for a more premium, modern tech look
 import "./globals.css";
 import ResponsiveNavbar from "@/components/home/navbar/ResponsiveNavbar";
 import Footer from "@/components/home/footer/Footer";
 
-const font = Inter({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+const font = Outfit({
   subsets: ["latin"],
-})
+  weight: ["300", "400", "500", "600", "700", "800"], // Varied weights for better typography hierarchy
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vedchaudhari.vercel.app"),
-  title: "Ved Chaudhari | Full Stack Developer Portfolio",
-  description: "Portfolio of Ved Chaudhari, a Full Stack Developer specializing in Next.js, React, and modern web technologies. View my projects and skills.",
-  keywords: ["Ved Chaudhari", "Portfolio", "Full Stack Developer", "Next.js", "React", "Web Development", "Software Engineer"],
-  authors: [{ name: "Ved Chaudhari" }],
+  title: {
+    default: "Ved Chaudhari | Backend Engineer & Real-Time Systems Specialist",
+    template: "%s | Ved Chaudhari"
+  },
+  description: "Backend Engineer specializing in scalable Node.js systems, Microservices, Redis, RabbitMQ, and AWS. Building high-performance, real-time applications.",
+  keywords: [
+    "Ved Chaudhari",
+    "Backend Engineer",
+    "Node.js Developer",
+    "Microservices",
+    "System Design",
+    "AWS",
+    "Docker",
+    "Redis",
+    "RabbitMQ",
+    "Full Stack Developer",
+    "Web Development"
+  ],
+  authors: [{ name: "Ved Chaudhari", url: "https://vedchaudhari.vercel.app" }],
   creator: "Ved Chaudhari",
   publisher: "Ved Chaudhari",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "Ved Chaudhari | Full Stack Developer Portfolio",
-    description: "Portfolio of Ved Chaudhari, a Full Stack Developer specializing in Next.js, React, and modern web technologies.",
+    title: "Ved Chaudhari | Backend Engineer & Scalable Systems",
+    description: "Backend Engineer specializing in scalable Node.js systems, Microservices, and Cloud Infrastructure. View my production-grade projects.",
     url: "https://vedchaudhari.vercel.app",
     siteName: "Ved Chaudhari Portfolio",
     images: [
       {
-        url: "/images/s12.png",
-        width: 800,
-        height: 600,
-        alt: "Ved Chaudhari Portfolio",
+        url: "/images/og-image.png", // Assuming a generic OG image or the profile one
+        width: 1200,
+        height: 630,
+        alt: "Ved Chaudhari - Backend Engineer",
       },
     ],
     locale: "en_US",
@@ -35,26 +55,31 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ved Chaudhari | Full Stack Developer Portfolio",
-    description: "Portfolio of Ved Chaudhari, a Full Stack Developer specializing in Next.js, React, and modern web technologies.",
-    images: ["/images/s12.png"],
+    title: "Ved Chaudhari | Backend Engineer",
+    description: "Building scalable backend systems with Node.js, RabbitMQ, and AWS.",
+    images: ["/images/og-image.png"],
+    creator: "@vedchaudhari", // Placeholder if not known, or remove if unsure. Keeping safe general structure.
   },
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://vedchaudhari.vercel.app",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
   },
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({

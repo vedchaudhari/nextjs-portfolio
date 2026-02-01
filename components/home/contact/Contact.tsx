@@ -61,26 +61,29 @@ const Contact = () => {
     };
 
     return (
-        <div className='pt-16 pb-16 px-4'>
+        <div className='pt-20 pb-20 px-4 max-w-[1920px] mx-auto overflow-hidden'>
             <div data-aos="fade-up" data-aos-delay="100"
                 className='w-[95%] sm:w-[90%] lg:w-[85%] xl:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center'>
                 {/*Text Content*/}
                 <div >
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-200">
-                        Reach Out Anytime
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        Let's <span className="bg-linear-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">Connect</span>
                     </h2>
                     <p className="text-gray-400 mt-6 text-base sm:text-lg leading-relaxed">
-                        Whether it's a project idea or a quick question, I'm always happy to chat. Drop a message and I'll respond promptly!
-
+                        Open to Backend / SDE-1 opportunities and interesting engineering problems. Let’s connect.
                     </p>
                     <div className='mt-7 space-y-4'>
-                        <div className='flex items-center space-x-3 group cursor-pointer'>
-                            <BiEnvelope className='w-8 h-8 sm:w-9 sm:h-9 text-cyan-300 group-hover:scale-110 transition-transform duration-300' />
-                            <p className='text-lg sm:text-xl font-bold text-gray-400 group-hover:text-cyan-300 transition-colors duration-300'>vedc2853@gmail.com</p>
+                        <div className='flex items-center space-x-4 group cursor-pointer p-4 rounded-xl hover:bg-white/5 transition-colors duration-300 border border-transparent hover:border-cyan-500/20'>
+                            <div className="w-12 h-12 bg-cyan-900/20 rounded-full flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors duration-300">
+                                <BiEnvelope className='w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300' />
+                            </div>
+                            <p className='text-lg sm:text-xl font-medium text-gray-300 group-hover:text-cyan-300 transition-colors duration-300'>vedc2853@gmail.com</p>
                         </div>
-                        <div className='flex items-center space-x-3 group cursor-pointer'>
-                            <BiMap className='w-8 h-8 sm:w-9 sm:h-9 text-cyan-300 group-hover:scale-110 transition-transform duration-300' />
-                            <p className='text-lg sm:text-xl font-bold text-gray-400 group-hover:text-cyan-300 transition-colors duration-300'>Mumbai, India</p>
+                        <div className='flex items-center space-x-4 group cursor-pointer p-4 rounded-xl hover:bg-white/5 transition-colors duration-300 border border-transparent hover:border-cyan-500/20'>
+                            <div className="w-12 h-12 bg-cyan-900/20 rounded-full flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors duration-300">
+                                <BiMap className='w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300' />
+                            </div>
+                            <p className='text-lg sm:text-xl font-medium text-gray-300 group-hover:text-cyan-300 transition-colors duration-300'>Mumbai, India</p>
                         </div>
                     </div>
                     {/*Social icons*/}
@@ -91,7 +94,7 @@ const Contact = () => {
                         </a>
 
                         {/* Instagram */}
-                        <a href="https://www.instagram.com/vedchaudhari__07" target="_blank" rel="noopener noreferrer" className='w-12 h-12 sm:w-14 sm:h-14 glass-effect rounded-full flex items-center justify-center cursor-pointer hover:bg-gradient-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(221,42,123,0.5)]'>
+                        <a href="https://www.instagram.com/vedchaudhari__07" target="_blank" rel="noopener noreferrer" className='w-12 h-12 sm:w-14 sm:h-14 glass-effect rounded-full flex items-center justify-center cursor-pointer hover:bg-linear-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(221,42,123,0.5)]'>
                             <FaInstagram className='text-white w-5 h-5 sm:w-6 sm:h-6' />
                         </a>
 
@@ -115,7 +118,10 @@ const Contact = () => {
                 </div>
 
                 {/*form*/}
-                <div className='glass-effect md:p-10 p-6 rounded-2xl shadow-2xl'>
+                <div className='bg-white/5 backdrop-blur-md p-6 sm:p-10 rounded-3xl border border-white/5 shadow-2xl hover:shadow-[0_0_50px_rgba(6,182,212,0.15)] transition-all duration-500 relative overflow-hidden'>
+                    {/* Glow effect */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
 
                     {submitStatus && (
                         <div className={`mb-6 p-4 rounded-lg animate-in fade-in duration-300 ${submitStatus.includes('successfully') || submitStatus.includes('sent')
@@ -136,7 +142,7 @@ const Contact = () => {
                             required
                             minLength={2}
                             maxLength={100}
-                            className='px-4 py-3.5 bg-[#363659] text-white outline-none rounded-lg w-full placeholder:text-white/70 focus:ring-2 focus:ring-cyan-500 transition-all duration-300'
+                            className='px-4 py-4 bg-black/20 text-white outline-none rounded-xl w-full placeholder:text-gray-500 border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-950/10 transition-all duration-300'
                         />
                         <input
                             type="email"
@@ -145,7 +151,7 @@ const Contact = () => {
                             onChange={handleInputChange}
                             placeholder='Email Address (Optional)'
                             maxLength={100}
-                            className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-lg w-full placeholder:text-white/70 focus:ring-2 focus:ring-cyan-500 transition-all duration-300'
+                            className='px-4 py-4 mt-6 bg-black/20 text-white outline-none rounded-xl w-full placeholder:text-gray-500 border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-950/10 transition-all duration-300'
                         />
                         <input
                             type="text"
@@ -154,25 +160,25 @@ const Contact = () => {
                             onChange={handleInputChange}
                             placeholder='Mobile no. (Optional)'
                             maxLength={20}
-                            className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-lg w-full placeholder:text-white/70 focus:ring-2 focus:ring-cyan-500 transition-all duration-300'
+                            className='px-4 py-4 mt-6 bg-black/20 text-white outline-none rounded-xl w-full placeholder:text-gray-500 border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-950/10 transition-all duration-300'
                         />
                         <textarea
                             name="message"
                             value={formData.message}
                             onChange={handleInputChange}
-                            placeholder='Your Message'
+                            placeholder='How can I help you?'
                             required
                             minLength={10}
                             maxLength={2000}
-                            className='px-4 py-3.5 mt-6 bg-[#363659] text-white outline-none rounded-lg w-full placeholder:text-white/70 h-[10rem] resize-none focus:ring-2 focus:ring-cyan-500 transition-all duration-300'
+                            className='px-4 py-4 mt-6 bg-black/20 text-white outline-none rounded-xl w-full placeholder:text-gray-500 h-40 resize-none border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-950/10 transition-all duration-300'
                         />
 
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className={`mt-8 px-12 py-4 transition-all duration-300 text-white rounded-full font-semibold ${isSubmitting
+                            className={`mt-8 px-12 py-4 transition-all duration-300 text-white rounded-xl font-bold tracking-wide w-full sm:w-auto ${isSubmitting
                                 ? 'bg-gray-600 cursor-not-allowed'
-                                : 'bg-blue-800 hover:bg-blue-900 cursor-pointer hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]'
+                                : 'bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 shadow-lg hover:shadow-cyan-500/30'
                                 }`}
                         >
                             {isSubmitting ? 'Sending...' : 'Send Message'}

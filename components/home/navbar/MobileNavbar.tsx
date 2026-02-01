@@ -15,11 +15,14 @@ const MobileNavbar = ({ closeNav, showNav }: Props) => {
   return (
     <div>
       {/*overlay*/}
-      <div className={`fixed inset-0 ${navOpen} transition-all right-0 duration-500 z-[1002] bg-black opacity-70 w-full h-screen`}>
+      <div className={`fixed inset-0 ${navOpen} transition-all right-0 duration-500 z-1002 bg-black opacity-70 w-full h-screen`}>
       </div>
 
       {/*navlinks*/}
-      <div className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-gradient-to-br backdrop-blur-lg space-y-6 z-[1050] right-0 shadow-2xl`}>
+      <div className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-[#0f142e] border-l border-white/10 space-y-6 z-1050 right-0 shadow-2xl overflow-hidden`}>
+        {/* Background Gradients */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
         {
           NavLinks.map((link) => {
             return (

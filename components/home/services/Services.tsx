@@ -3,30 +3,30 @@ import ServiceCard from './ServiceCard'
 
 const Services = () => {
     return (
-        <div className='pt-16 pb-16 px-4'>
-            <h1 className='text-center text-2xl md:text-4xl xl:text-5xl font-bold text-white '>
-                My <span className='text-cyan-300'>Expertise</span>
+        <div className='pt-20 pb-20 px-4 max-w-[1920px] mx-auto'>
+            <h1 className='text-center text-3xl md:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-tight'>
+                My <span className='bg-linear-to-r from-cyan-300 to-purple-400 bg-clip-text text-transparent'>Expertise</span>
             </h1>
-            <div className='w-[95%] sm:w-[85%] lg:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 mt-16 lg:mt-20 items-center'>
+            <div className='w-[95%] sm:w-[90%] xl:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
                 <div data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <ServiceCard
                         icon="/images/s1.png"
-                        name="Web and Mobile App"
-                        description="Designing and developing responsive, high-performance websites and mobile applications focused on seamless user experiences."
+                        name="Backend Development"
+                        description="Architecting scalable Node.js servers, designing RESTful APIs, and implementing performance optimization with Redis and WebSockets."
                     />
                 </div>
                 <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="100">
                     <ServiceCard
                         icon="/images/s2.png"
-                        name="Backend Development"
-                        description="Building secure, scalable, and high-performing backend systems that ensure smooth data flow and robust application logic."
+                        name="Real-Time Systems"
+                        description="Building event-driven architectures using Socket.IO and RabbitMQ for low-latency messaging in multiplayer and chat applications."
                     />
                 </div>
                 <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="200">
                     <ServiceCard
                         icon="/images/s3.png"
-                        name="API Integration"
-                        description="Creating and integrating reliable APIs that connect different systems and enhance the functionality and performance of applications."
+                        name="Cloud & Deployment"
+                        description="Deploying containerized microservices on AWS EC2, managing Nginx reverse proxies, and automating workflows with CI/CD pipelines."
                     />
                 </div>
             </div>

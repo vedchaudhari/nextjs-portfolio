@@ -1,5 +1,59 @@
 @import "tailwindcss";
 
+/* Cyberpunk Grid Background */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+.perspective-grid {
+  transform: perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+}
+
+.animate-grid-flow {
+  animation: grid-flow 20s linear infinite;
+}
+
+@keyframes grid-flow {
+  0% { transform: perspective(1000px) rotateX(60deg) translateY(0) translateZ(-200px); }
+  100% { transform: perspective(1000px) rotateX(60deg) translateY(50px) translateZ(-200px); }
+}
+
+/* Holo Card Effect */
+.holo-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6, 182, 212, 0.2),
+    rgba(168, 85, 247, 0.2),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.holo-card:hover::before {
+  left: 150%;
+  transition: left 0.7s ease;
+}
+
 html {
   scroll-behavior: smooth;
 }
