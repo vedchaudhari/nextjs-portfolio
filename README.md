@@ -1,439 +1,121 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" align="center" width="30%">
+  <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" align="center" width="20%">
 </p>
-<p align="center"><h1 align="center">NEXTJS-PORTFOLIO</h1></p>
+<h1 align="center">Ved Chaudhari | Portfolio</h1>
+
 <p align="center">
-    <em><code>❯ A modern, responsive portfolio website built with Next.js 16, showcasing professional experience, projects, and skills with interactive animations and particle effects.</code></em>
+  <em>A high-performance, modern portfolio built with <b>Next.js 16</b> and <b>Tailwind CSS 4</b>, showcasing engineering expertise in scalable systems and real-time platforms.</em>
 </p>
+
 <p align="center">
-    <img src="https://img.shields.io/github/license/vedchaudhari/nextjs-portfolio?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-    <img src="https://img.shields.io/github/last-commit/vedchaudhari/nextjs-portfolio?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-    <img src="https://img.shields.io/github/languages/top/vedchaudhari/nextjs-portfolio?style=default&color=0080ff" alt="repo-top-language">
-    <img src="https://img.shields.io/github/languages/count/vedchaudhari/nextjs-portfolio?style=default&color=0080ff" alt="repo-language-count">
+    <img src="https://img.shields.io/github/languages/top/vedchaudhari/nextjs-portfolio?style=flat-square&color=00d1ff" alt="top-language">
+    <img src="https://img.shields.io/github/last-commit/vedchaudhari/nextjs-portfolio?style=flat-square&color=00d1ff" alt="last-commit">
+    <img src="https://img.shields.io/badge/Next.js-16.0-black?style=flat-square&logo=next.js" alt="nextjs">
+    <img src="https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat-square&logo=tailwind-css" alt="tailwind">
 </p>
-<p align="center"><!-- default option, no dependency badges. -->
-</p>
-<p align="center">
-    <!-- default option, no dependency badges. -->
-</p>
-<br>
-
-##  Table of Contents
-
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Project Structure](#-project-structure)
-  - [ Project Index](#-project-index)
-- [ Getting Started](#-getting-started)
-  - [ Prerequisites](#-prerequisites)
-  - [ Installation](#-installation)
-  - [ Usage](#-usage)
-  - [ Testing](#-testing)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
 
 ---
 
-##  Overview
+## 🚀 Overview
 
-A professional portfolio website built with Next.js 16 and TypeScript, featuring a modern dark theme with interactive animations. The portfolio showcases professional experience, projects, technical skills, and includes sections for expertise, work experience, education, project gallery, skills visualization, blog posts, and contact information. Built with performance and user experience in mind, utilizing cutting-edge web technologies.
+This repository contains the source code for my professional portfolio website. It is designed to demonstrate my capabilities as a **Backend/Full-Stack Engineer**, focusing on scalability, low-latency communication, and modern UI/UX principles.
 
----
-
-##  Features
-
-- **Interactive Hero Section** - Dynamic particle background with typewriter effect
-- **Responsive Navigation** - Mobile-friendly navbar with smooth scrolling
-- **Professional Sections** - Expertise, experience, projects, skills, blogs, and contact
-- **Project Showcase** - Interactive project cards with live demos and GitHub links
-- **Skills Visualization** - Animated skill cards with percentage indicators
-- **Contact Form** - Professional contact section with social media links
-- **Smooth Animations** - AOS (Animate On Scroll) and Framer Motion effects
-- **Modern UI/UX** - Dark theme with cyan accents and glassmorphism effects
+- **Live Demo:** [vedchaudhari.vercel.app](https://vedchaudhari.vercel.app)
+- **Primary Focus:** Backend Systems, Distributed Architecture, Real-time APIs.
 
 ---
 
-##  Project Structure
+## ✨ Features
 
-```sh
-└── nextjs-portfolio/
-    ├── README.md
-    ├── app
-    │   ├── about
-    │   ├── favicon.ico
-    │   ├── globals.css
-    │   ├── layout.tsx
-    │   └── page.tsx
-    ├── components
-    │   └── home
-    ├── constant
-    │   └── constant.ts
-    ├── eslint.config.mjs
-    ├── next.config.ts
-    ├── package-lock.json
-    ├── package.json
-    ├── postcss.config.mjs
-    ├── public
-    │   ├── file.svg
-    │   ├── globe.svg
-    │   ├── images
-    │   ├── next.svg
-    │   ├── pdfs
-    │   ├── vercel.svg
-    │   └── window.svg
-    └── tsconfig.json
-```
-
-
-###  Project Index
-<details open>
-    <summary><b><code>NEXTJS-PORTFOLIO/</code></b></summary>
-    <details> <!-- __root__ Submodule -->
-        <summary><b>__root__</b></summary>
-        <blockquote>
-            <table>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/package-lock.json'>package-lock.json</a></b></td>
-                <td>Package lock file for dependency management</td>
-            </tr>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/next.config.ts'>next.config.ts</a></b></td>
-                <td>Next.js configuration file</td>
-            </tr>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/tsconfig.json'>tsconfig.json</a></b></td>
-                <td>TypeScript configuration</td>
-            </tr>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/eslint.config.mjs'>eslint.config.mjs</a></b></td>
-                <td>ESLint configuration for code quality</td>
-            </tr>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/postcss.config.mjs'>postcss.config.mjs</a></b></td>
-                <td>PostCSS configuration for Tailwind CSS</td>
-            </tr>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/package.json'>package.json</a></b></td>
-                <td>Package dependencies and scripts configuration</td>
-            </tr>
-            </table>
-        </blockquote>
-    </details>
-    <details> <!-- components Submodule -->
-        <summary><b>components</b></summary>
-        <blockquote>
-            <details>
-                <summary><b>home</b></summary>
-                <blockquote>
-                    <table>
-                    <tr>
-                        <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/Home.tsx'>Home.tsx</a></b></td>
-                        <td>Main home page component with all sections</td>
-                    </tr>
-                    </table>
-                    <details>
-                        <summary><b>skills</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/skills/Skills.tsx'>Skills.tsx</a></b></td>
-                                <td>Skills section with animated skill cards</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>resume</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/resume/ResumeCard.tsx'>ResumeCard.tsx</a></b></td>
-                                <td>Resume card component for experience/education</td>
-                            </tr>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/resume/Resume.tsx'>Resume.tsx</a></b></td>
-                                <td>Resume section with work experience and education</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>projects</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/projects/Projects.tsx'>Projects.tsx</a></b></td>
-                                <td>Projects showcase with interactive cards</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>navbar</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/navbar/MobileNavbar.tsx'>MobileNavbar.tsx</a></b></td>
-                                <td>Mobile navigation component</td>
-                            </tr>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/navbar/Navbar.tsx'>Navbar.tsx</a></b></td>
-                                <td>Desktop navigation component</td>
-                            </tr>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/navbar/ResponsiveNavbar.tsx'>ResponsiveNavbar.tsx</a></b></td>
-                                <td>Responsive navigation wrapper</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>contact</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/contact/Contact.tsx'>Contact.tsx</a></b></td>
-                                <td>Contact section with form and social links</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>services</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/services/ServiceCard.tsx'>ServiceCard.tsx</a></b></td>
-                                <td>Service card component for expertise section</td>
-                            </tr>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/services/Services.tsx'>Services.tsx</a></b></td>
-                                <td>Services/expertise section</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>hero</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/hero/ParticleBackground.tsx'>ParticleBackground.tsx</a></b></td>
-                                <td>Particle background for hero section</td>
-                            </tr>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/hero/Hero.tsx'>Hero.tsx</a></b></td>
-                                <td>Hero section with typewriter effect and CTA</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>blog</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/blog/Blog.tsx'>Blog.tsx</a></b></td>
-                                <td>Blog section component</td>
-                            </tr>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/blog/BlogCard.tsx'>BlogCard.tsx</a></b></td>
-                                <td>Individual blog card component</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                    <details>
-                        <summary><b>footer</b></summary>
-                        <blockquote>
-                            <table>
-                            <tr>
-                                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/components/home/footer/Footer.tsx'>Footer.tsx</a></b></td>
-                                <td>Footer component</td>
-                            </tr>
-                            </table>
-                        </blockquote>
-                    </details>
-                </blockquote>
-            </details>
-        </blockquote>
-    </details>
-    <details> <!-- constant Submodule -->
-        <summary><b>constant</b></summary>
-        <blockquote>
-            <table>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/constant/constant.ts'>constant.ts</a></b></td>
-                <td>Navigation links and constants configuration</td>
-            </tr>
-            </table>
-        </blockquote>
-    </details>
-    <details> <!-- app Submodule -->
-        <summary><b>app</b></summary>
-        <blockquote>
-            <table>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/layout.tsx'>layout.tsx</a></b></td>
-                <td>Root layout with navigation and footer</td>
-            </tr>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/globals.css'>globals.css</a></b></td>
-                <td>Global CSS styles with Tailwind CSS</td>
-            </tr>
-            <tr>
-                <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/page.tsx'>page.tsx</a></b></td>
-                <td>Main page component rendering Home</td>
-            </tr>
-            </table>
-            <details>
-                <summary><b>about</b></summary>
-                <blockquote>
-                    <details>
-                        <summary><b>team</b></summary>
-                        <blockquote>
-                            <details>
-                                <summary><b>[name]</b></summary>
-                                <blockquote>
-                                    <table>
-                                    <tr>
-                                        <td><b><a href='https://github.com/vedchaudhari/nextjs-portfolio/blob/master/app/about/team/[name]/page.tsx'>page.tsx</a></b></td>
-                                        <td>Dynamic team member page</td>
-                                    </tr>
-                                    </table>
-                                </blockquote>
-                            </details>
-                        </blockquote>
-                    </details>
-                </blockquote>
-            </details>
-        </blockquote>
-    </details>
-</details>
-
----
-##  Getting Started
-
-###  Prerequisites
-
-Before getting started with nextjs-portfolio, ensure your runtime environment meets the following requirements:
-
-- **Programming Language:** TypeScript
-- **Package Manager:** Npm
-
-
-###  Installation
-
-Install nextjs-portfolio using one of the following methods:
-
-**Build from source:**
-
-1. Clone the nextjs-portfolio repository:
-```sh
-❯ git clone https://github.com/vedchaudhari/nextjs-portfolio
-```
-
-2. Navigate to the project directory:
-```sh
-❯ cd nextjs-portfolio
-```
-
-3. Install the project dependencies:
-
-
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
-❯ npm install
-```
-
-
-
-
-###  Usage
-Run nextjs-portfolio using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
-❯ npm run dev
-```
-
-
-###  Testing
-Run the test suite using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
-❯ npm test
-```
-
-
----
-##  Project Roadmap
-
-- [X] **`Hero Section`**: <strike>Interactive hero with particle background and typewriter effect.</strike>
-- [X] **`Portfolio Sections`**: <strike>Complete sections for expertise, experience, projects, skills, blogs, and contact.</strike>
-- [X] **`Responsive Design`**: <strike>Mobile-first responsive design with modern UI/UX.</strike>
-- [X] **`Animations`**: <strike>Smooth animations using AOS and Framer Motion.</strike>
-- [ ] **`Contact API`**: Implement backend API for contact form functionality.
-- [ ] **`Blog CMS`**: Add content management system for blog posts.
-- [ ] **`Dark/Light Mode`**: Add theme toggle functionality.
+- **Dynamic Hero Section:** Built with `@tsparticles` for interactive backgrounds and `typewriter-effect`.
+- **Project Showcase:** Interactive carousel with `framer-motion` and `lucide-react` icons.
+- **Experience Timeline:** A structured layout of my professional growth using animated components.
+- **Contact Integration:** Functional contact form with validation and backend connectivity.
+- **Performance Optimized:** Utilizing Next.js 16's latest rendering capabilities and Tailwind CSS 4's lightning-fast JIT engine.
+- **Responsive Architecture:** Fully fluid design across mobile, tablet, and ultra-wide displays.
 
 ---
 
-##  Contributing
+## 🛠️ Tech Stack
 
-- **💬 [Join the Discussions](https://github.com/vedchaudhari/nextjs-portfolio/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/vedchaudhari/nextjs-portfolio/issues)**: Submit bugs found or log feature requests for the `nextjs-portfolio` project.
-- **💡 [Submit Pull Requests](https://github.com/vedchaudhari/nextjs-portfolio/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+### Core
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/), [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)
 
-<details closed>
-<summary>Contributing Guidelines</summary>
+### Interaction & UI
+- **Icons:** `lucide-react`, `react-icons`
+- **Backgrounds:** `@tsparticles/react`
+- **Effects:** `typewriter-effect`, `react-parallax-tilt`
 
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone https://github.com/vedchaudhari/nextjs-portfolio
+---
+
+## 📂 Project Structure
+
+```bash
+├── app/                  # Next.js App Router (Layouts, Pages, Global Styles)
+├── components/           # Reusable UI components
+│   └── home/             # Section-specific components (Hero, Projects, etc.)
+├── constant/             # Application-wide constants & navigation links
+├── public/               # Static assets (Images, Icons, PDFs)
+└── next.config.ts        # Framework configuration
+```
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+- Node.js 18.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vedchaudhari/nextjs-portfolio.git
+   cd nextjs-portfolio
    ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
 
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/vedchaudhari/nextjs-portfolio/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=vedchaudhari/nextjs-portfolio">
-   </a>
-</p>
-</details>
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Environment Setup (Optional):
+   Create a `.env.local` file for local development:
+   ```env
+   NEXT_PUBLIC_BACKEND_URL=your_backend_api_url
+   ```
+
+4. Launch Development Server:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the result.
+
+### Build
+To create an optimized production build:
+```bash
+npm run build
+npm start
+```
 
 ---
 
-##  License
+## 👨‍💻 About Me
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+I am a **Backend Engineer** specializing in building reliable, scalable distributed systems. My expertise includes:
+- **Node.js / Express / NestJS**
+- **MongoDB / PostgreSQL / Redis**
+- **RabbitMQ / Sockets.IO**
+- **Docker / AWS / Nginx**
+
+Explore more of my work on [GitHub](https://github.com/vedchaudhari) or connect with me on [LinkedIn](https://linkedin.com/in/ved-chaudhari).
 
 ---
 
-##  Acknowledgments
+## 📝 License
 
-- List any resources, contributors, inspiration, etc. here.
-
----
+This project is open-source and available under the MIT License.
