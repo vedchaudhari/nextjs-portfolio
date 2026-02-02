@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Github, Globe, ChevronLeft, ChevronRight, Play } from 'lucide-react'
+import { FaAndroid, FaApple } from 'react-icons/fa'
 
 
 const projects = [
@@ -33,8 +34,9 @@ const projects = [
         tech: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Docker', 'AWS', 'GitHub Actions', 'CI/CD', 'Nginx'],
         github: 'https://github.com/vedchaudhari/rn-bookworm',
         playLive: 'https://appetize.io/app/b_hyut3u3m5x5sns3lrhduhsmr5e',
-        live: 'https://expo.dev/accounts/vedchaudhari/projects/readsphere/builds/712cda94-ff52-411f-8a90-1b0882e910c0',
-        liveLabel: 'Android Build',
+        playLiveLabel: 'Android',
+        live: 'https://appetize.io/app/b_mymvypqrhea6r3twd2blcdk3eq',
+        liveLabel: 'iOS',
         delay: 0.1
     },
     {
@@ -264,8 +266,12 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                             rel="noopener noreferrer"
                             className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/20 hover:border-cyan-500/40 rounded text-sm text-cyan-300 transition-all group/btn shadow-[0_0_10px_rgba(6,182,212,0.1)]"
                         >
-                            <Play size={16} />
-                            <span className="font-mono text-xs uppercase">Demo</span>
+                            {/* @ts-ignore */}
+                            {project.playLiveLabel === 'Android' ? <FaAndroid size={16} /> : <Play size={16} />}
+                            <span className="font-mono text-xs uppercase">
+                                {/* @ts-ignore */}
+                                {project.playLiveLabel || 'Demo'}
+                            </span>
                         </a>
                     )}
 
@@ -275,10 +281,11 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                         rel="noopener noreferrer"
                         className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-cyan-600/20 hover:bg-cyan-600/30 border border-cyan-500/30 hover:border-cyan-400/60 rounded text-sm text-cyan-200 transition-all group/btn shadow-[0_0_15px_rgba(6,182,212,0.1)] hover:shadow-[0_0_20px_rgba(6,182,212,0.2)]"
                     >
-                        <Globe size={16} />
+                        {/* @ts-ignore */}
+                        {project.liveLabel === 'iOS' ? <FaApple size={16} /> : <Globe size={16} />}
                         <span className="font-mono text-xs uppercase">
                             {/* @ts-ignore */}
-                            {project.liveLabel ? 'Deploy' : 'Site'}
+                            {project.liveLabel || 'Site'}
                         </span>
                     </a>
                 </div>
