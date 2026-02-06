@@ -50,16 +50,19 @@ const Resume: React.FC = () => {
                                 description={
                                     <ul className="list-disc pl-5 space-y-2 text-white/70 text-sm sm:text-base leading-relaxed">
                                         <li>
-                                            Built scalable <span className="text-cyan-300 font-medium">REST APIs</span> & <span className="text-cyan-300 font-medium">WebSockets</span> using <span className="text-cyan-300 font-medium">Node.js</span> and <span className="text-cyan-300 font-medium">MongoDB</span> for high-traffic apps.
+                                            Built and maintained backend APIs for a Learning Management System (LMS) serving <span className="text-cyan-300 font-medium">10,000+ users</span>, managing enrollments, <span className="text-cyan-300 font-medium">authentication</span>, and <span className="text-cyan-300 font-medium">role-based access control</span>.
                                         </li>
                                         <li>
-                                            Reduced API latency by <span className="text-cyan-300 font-medium">40%</span> using <span className="text-cyan-300 font-medium">Redis</span> caching and async task queues.
+                                            Added <span className="text-cyan-300 font-medium">real-time order tracking</span> for a food delivery application using <span className="text-cyan-300 font-medium">Socket.IO</span>, enabling live status updates and location sharing.
                                         </li>
                                         <li>
-                                            Architected real-time messaging with <span className="text-cyan-300 font-medium">Socket.IO</span>, achieving <span className="text-cyan-300 font-medium">sub-50ms</span> delivery.
+                                            Optimized <span className="text-cyan-300 font-medium">MongoDB queries</span> and introduced a <span className="text-cyan-300 font-medium">Redis caching layer</span>, reducing average <span className="text-cyan-300 font-medium">API response time</span> from <span className="text-cyan-300 font-medium">300ms to 25ms</span>.
                                         </li>
                                         <li>
-                                            Deployed on <span className="text-cyan-300 font-medium">AWS EC2</span> with <span className="text-cyan-300 font-medium">Nginx</span>, SSL, and Dockerized CI/CD pipelines.
+                                            Integrated <span className="text-cyan-300 font-medium">payment gateway APIs</span> with secure <span className="text-cyan-300 font-medium">webhook handling</span> and structured logs to improve transaction reliability and debugging.
+                                        </li>
+                                        <li>
+                                            Dockerized services and set up <span className="text-cyan-300 font-medium">GitHub Actions CI/CD</span> on <span className="text-cyan-300 font-medium">AWS EC2</span> to automate builds and deployments.
                                         </li>
                                     </ul>
                                 }
@@ -77,13 +80,16 @@ const Resume: React.FC = () => {
                                 description={
                                     <ul className="list-disc pl-5 space-y-2 text-white/70 text-sm sm:text-base leading-relaxed">
                                         <li>
-                                            Developed multiplayer backend services (clans, leaderboards) using <span className="text-cyan-300 font-medium">Node.js</span> & <span className="text-cyan-300 font-medium">WebSockets</span>.
+                                            Implemented backend features for user groups, <span className="text-cyan-300 font-medium">RBAC</span>, and leaderboards using <span className="text-cyan-300 font-medium">Node.js</span> and <span className="text-cyan-300 font-medium">MongoDB</span>.
                                         </li>
                                         <li>
-                                            Improved <span className="text-cyan-300 font-medium">MongoDB</span> query performance by <span className="text-cyan-300 font-medium">25%</span> via indexing and schema optimization.
+                                            Added <span className="text-cyan-300 font-medium">WebSocket-based</span> real-time updates for live events and gameplay sessions.
                                         </li>
                                         <li>
-                                            Maintained real-time game state for <span className="text-cyan-300 font-medium">10k+ active users</span>.
+                                            Improved <span className="text-cyan-300 font-medium">database performance</span> by creating indexes and optimizing <span className="text-cyan-300 font-medium">Mongoose queries</span> on high-traffic APIs.
+                                        </li>
+                                        <li>
+                                            Assisted in debugging <span className="text-cyan-300 font-medium">production issues</span> and shipping fixes to improve application stability.
                                         </li>
                                     </ul>
                                 }
