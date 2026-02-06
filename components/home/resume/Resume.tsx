@@ -46,7 +46,7 @@ const Resume: React.FC = () => {
                             </div>
                             <ResumeCard
                                 date="Jan 2025 - Present"
-                                role="Node.js Developer - Wharf Street Studios"
+                                role="Node.js Developer - Wharf Street Strategies"
                                 description={
                                     <ul className="list-disc pl-5 space-y-2 text-white/70 text-sm sm:text-base leading-relaxed">
                                         <li>
