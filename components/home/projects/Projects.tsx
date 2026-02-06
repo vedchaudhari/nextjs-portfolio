@@ -33,9 +33,9 @@ const projects = [
         subtitle: 'Scalable mobile platform with Node.js backend on AWS EC2, featuring optimized content delivery via Nginx and Docker.',
         tech: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Docker', 'AWS', 'GitHub Actions', 'CI/CD', 'Nginx'],
         github: 'https://github.com/vedchaudhari/rn-bookworm',
-        playLive: 'https://appetize.io/app/b_hyut3u3m5x5sns3lrhduhsmr5e',
+        playLive: 'https://appetize.io/app/b_euk3xa4fwm5c7ddnlgqqa4rq7e',
         playLiveLabel: 'Android',
-        live: 'https://appetize.io/app/b_mymvypqrhea6r3twd2blcdk3eq',
+        live: 'https://appetize.io/app/b_33rfi2pnlrxbo4cw7xufpzqyga',
         liveLabel: 'iOS',
         delay: 0.1
     },
