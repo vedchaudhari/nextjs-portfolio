@@ -33,7 +33,7 @@ const projects = [
         subtitle: 'Scalable mobile platform with Node.js backend on AWS EC2, featuring optimized content delivery via Nginx and Docker.',
         tech: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Docker', 'AWS', 'GitHub Actions', 'CI/CD', 'Nginx'],
         github: 'https://github.com/vedchaudhari/rn-bookworm',
-        playLive: 'https://appetize.io/app/b_euk3xa4fwm5c7ddnlgqqa4rq7e',
+        playLive: 'https://appetize.io/app/b_vefdauo7wdjwgzkprn35yq7m2q',
         playLiveLabel: 'Android',
         live: 'https://appetize.io/app/b_33rfi2pnlrxbo4cw7xufpzqyga',
         liveLabel: 'iOS',
@@ -147,9 +147,9 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                 <div className="absolute top-3 right-4 text-[9px] font-mono text-cyan-500/40 hidden sm:block z-20">PROJECT_ID: {String(index + 1).padStart(2, '0')}</div>
 
                 {/* Status Badge */}
-                <div className="absolute top-3 left-3 z-20 bg-green-500/10 backdrop-blur-md border border-green-500/30 text-green-400 text-[9px] font-bold px-2 py-0.5 rounded shadow-[0_0_10px_rgba(34,197,94,0.2)]">
+                {/* <div className="absolute top-3 left-3 z-20 bg-green-500/10 backdrop-blur-md border border-green-500/30 text-green-400 text-[9px] font-bold px-2 py-0.5 rounded shadow-[0_0_10px_rgba(34,197,94,0.2)]">
                     PRODUCTION READY
-                </div>
+                </div> */}
 
                 {/* Carousel Container */}
                 <div className="absolute inset-0 flex items-center justify-center overflow-hidden bg-gray-900">
